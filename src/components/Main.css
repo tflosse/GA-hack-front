@@ -1,0 +1,27 @@
+/* Main Nav bar */
+.Nav-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo {
+    max-width: 5vw;
+}
+
+.Mobile-nav {
+    background-color: transparent;
+    border: none;
+}
+
+.Nav-button {
+    font-size: 2rem;
+}
+
+/* Landing page */
+
+.Ballot-illustration {
+    max-width: 70vw;
+    margin: 5vh;
+}

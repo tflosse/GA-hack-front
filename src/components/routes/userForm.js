@@ -1,8 +1,10 @@
 import React from "react";
+import "../Main.css";
 
 const UserForm = ({ address, handleChange, handleSubmit }) => {
   return (
     <div className="Main-panel">
+      <img className="Ballot-illustration" src="https://res.cloudinary.com/dgbf3yxnd/image/upload/v1601504623/Groupballot_qaq1qw.png" alt="ballot" />
       <h1>Are you ready for the 2020 elections?</h1>
       <h4>
         Take out quiz to find out your blind spots and get informed.

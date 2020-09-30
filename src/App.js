@@ -1,6 +1,7 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, withRouter, Redirect, Route, Switch, Link } from "react-router-dom";
 import "./App.css";
+import Layout from "./components/Layout";
 import Quiz from "./components/Quiz";
 import Results from "./components/routes/Results";
 import UserForm from "./components/routes/UserForm";
@@ -9,9 +10,11 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" component={UserForm} />
+        <Layout>
+          <Route exact path="/" component={UserForm} />
+          <Route path="/results" component={Results} />
+        </Layout>
         <Route path="/quiz" component={Quiz} />
-        <Route path="/results" component={Results} />
       </Switch>
     </div>
   );
