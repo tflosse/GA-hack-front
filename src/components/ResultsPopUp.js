@@ -19,77 +19,81 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
         <div className="resultsPopUpMain">
           <h1>Your Quiz Results</h1>
           <div className="allResultsBars">
-            <div className="resultsBar">
-              <p>Federal</p>
-              <ProgressBar
-                width="100"
-                trackWidth="13"
-                percentage="100"
-                defColor={{
-                  good: "#C65D4C",
-                  excellent: "#3A537F",
-                }}
-              />
+            <div className="allResultsBarColumn1">
+              <div className="resultsBar">
+                <p>Federal</p>
+                <ProgressBar
+                  width="150"
+                  trackWidth="13"
+                  percentage="100"
+                  defColor={{
+                    good: "#C65D4C",
+                    excellent: "#3A537F",
+                  }}
+                />
+              </div>
+              <div className="resultsBar">
+                <p>State</p>
+                <ProgressBar
+                  width="150"
+                  trackWidth="13"
+                  percentage="100"
+                  defColor={{
+                    good: "#C65D4C",
+                    excellent: "#3A537F",
+                  }}
+                />
+              </div>
+              <div className="resultsBar">
+                <p>Local</p>
+                <ProgressBar
+                  width="150"
+                  trackWidth="13"
+                  percentage="0"
+                  defColor={{
+                    good: "#C65D4C",
+                    excellent: "#3A537F",
+                  }}
+                />
+              </div>
             </div>
-            <div className="resultsBar">
-              <p>State</p>
-              <ProgressBar
-                width="100"
-                trackWidth="13"
-                percentage="100"
-                defColor={{
-                  good: "#C65D4C",
-                  excellent: "#3A537F",
-                }}
-              />
-            </div>
-            <div className="resultsBar">
-              <p>Local</p>
-              <ProgressBar
-                width="100"
-                trackWidth="13"
-                percentage="0"
-                defColor={{
-                  good: "#C65D4C",
-                  excellent: "#3A537F",
-                }}
-              />
-            </div>
-            <div className="resultsBar">
-              <p>Judicial</p>
-              <ProgressBar
-                width="100"
-                trackWidth="13"
-                percentage="50"
-                defColor={{
-                  good: "#C65D4C",
-                  excellent: "#3A537F",
-                }}
-              />
-            </div>
-            <div className="resultsBar">
-              <p>Measures</p>
-              <ProgressBar
-                width="100"
-                trackWidth="13"
-                percentage="0"
-                defColor={{
-                  good: "#C65D4C",
-                  excellent: "#3A537F",
-                }}
-              />
-            </div>
-            <div className="resultsBar">
-              <p>General</p>
-              <ProgressBar
-                width="100"
-                trackWidth="13"
-                percentage="100"
-                defColor={{
-                  good: "#C65D4C",
-                  excellent: "#3A537F",
-                }}
-              />
+            <div className="allResultsBarColumn2">
+              <div className="resultsBar">
+                <p>Judicial</p>
+                <ProgressBar
+                  width="150"
+                  trackWidth="13"
+                  percentage="50"
+                  defColor={{
+                    good: "#C65D4C",
+                    excellent: "#3A537F",
+                  }}
+                />
+              </div>
+              <div className="resultsBar">
+                <p>Measures</p>
+                <ProgressBar
+                  width="150"
+                  trackWidth="13"
+                  percentage="0"
+                  defColor={{
+                    good: "#C65D4C",
+                    excellent: "#3A537F",
+                  }}
+                />
+              </div>
+              <div className="resultsBar">
+                <p>General</p>
+                <ProgressBar
+                  width="150"
+                  trackWidth="13"
+                  percentage="100"
+                  defColor={{
+                    good: "#C65D4C",
+                    excellent: "#3A537F",
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="resultsInfo">
@@ -100,10 +104,8 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
               habitant vitae rutrum pharetra ut leo. Interdum ornare donec a
               molestie morbi sed non, et ac.
             </p>
-            <br/>
             <br />
-            <p>Shared with friends</p>
-            <br/>
+            <p>Share with friends</p>
             <FontAwesomeIcon icon={faFacebookSquare} className="socialLogo" />
             <FontAwesomeIcon icon={faInstagramSquare} className="socialLogo" />
             <FontAwesomeIcon icon={faTwitter} className="socialLogo" />
