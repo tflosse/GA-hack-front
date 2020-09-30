@@ -1,12 +1,14 @@
-import React from 'react'
-import ResultsPopUp from '../ResultsPopUp'
+import React, { useState } from "react";
+import ResultsPopUp from "../ResultsPopUp";
 
 const Results = () => {
-    return (
-        <div>
-            <ResultsPopUp />
-        </div>
-    )
-}
+  const [isPopUp, setIsPopUp] = useState(true);
 
-export default Results
+  return (
+    <div>
+      <ResultsPopUp isPopUp={isPopUp} setIsPopUp={setIsPopUp} />
+    </div>
+  );
+};
+
+export default Results;

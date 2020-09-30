@@ -7,10 +7,12 @@ import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import { faInstagramSquare } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const ResultsPopUp = () => {
+const ResultsPopUp = ({isPopUp, setIsPopUp}) => {
+
+
   return (
-    <div className="resultsPopUp">
-      <FontAwesomeIcon icon={faTimes} className="exitLogo" />
+    <div className={`resultsPopUp ${isPopUp ? null : 'hide'}`}>
+      <FontAwesomeIcon icon={faTimes} className="exitLogo" onClick={() => setIsPopUp(false)}/>
       <div className="resultsPopUpMain">
         <h1>Your Quiz Results</h1>
         <div className="allResultsBars">
