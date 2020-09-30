@@ -1,0 +1,99 @@
+.hide {
+  display: none;
+}
+
+.resultsPopUp {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+}
+
+.resultsPopUpInner {
+  margin: 20px;
+  position: relative;
+  background: #fffde8;
+  padding: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.exitLogo {
+  font-size: 25px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.resultsPopUpMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultsPopUpMain h1 {
+  font-family: "Spectral", serif;
+  font-weight: normal;
+}
+
+.allResultsBars {
+  padding: 15px;
+}
+
+.resultsBar {
+  display: flex;
+  align-items: center;
+}
+
+.resultsBar p {
+  width: 100px;
+  font-family: "Mulish", sans-serif;
+}
+
+.resultsInfo {
+    margin-top: 30px;
+}
+
+.resultsInfo p {
+  font-family: "Mulish", sans-serif;
+}
+
+.resultsInfo h1 {
+  display: none;
+}
+
+.socialLogo {
+  font-size: 40px;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .resultsPopUpInner {
+    margin: 100px 100px 100px 100px;
+  }
+
+  .resultsPopUpMain {
+    flex-direction: row;
+  }
+
+  .allResultsBars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+  }
+
+  .resultsPopUpMain h1 {
+    display: none;
+  }
+
+  .resultsInfo h1 {
+    display: block;
+  }
+
+  .resultsInfo {
+    text-align: left;
+    width: 30%;
+  }
+}
