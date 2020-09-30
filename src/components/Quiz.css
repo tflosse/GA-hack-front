@@ -9,6 +9,16 @@
 .choice{
 margin-left:10px ;
 }
-.radio{
+.radioInput{
     padding: 5px 0;
+}
+
+.right{
+    color: #447F3A;
+}
+.wrong{
+    color: #C65D4C;
+}
+.normal{
+    color: black;
 }
