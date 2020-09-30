@@ -19,7 +19,7 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
         <div className="resultsPopUpMain">
           <h1>Your Quiz Results</h1>
           <div className="allResultsBars">
-            <div className="allResultsBarColumn1">
+            <div className="allResultsBarColumn">
               <div className="resultsBar">
                 <p>Federal</p>
                 <ProgressBar
@@ -57,7 +57,7 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 />
               </div>
             </div>
-            <div className="allResultsBarColumn2">
+            <div className="allResultsBarColumn">
               <div className="resultsBar">
                 <p>Judicial</p>
                 <ProgressBar
