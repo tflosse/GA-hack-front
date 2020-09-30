@@ -97,10 +97,10 @@ function Quiz(props) {
 	};
 
 	return (
-		<Container>
+		<Container className='quizContainer'>
 			<h3>{questionsAndAnswers[section].section[count].question}</h3>
 			<form onSubmit={handleSubmit}>
-				<ListGroup>
+				<ListGroup className='listGroup'>
 					<ListGroup.Item className='item'>
 						<InputGroup className='radioInput'>
 							<InputGroup.Prepend className='prepend'>
@@ -109,7 +109,7 @@ function Quiz(props) {
 									name='choice'
 									id='question'
 									value={0}
-									className={colors.color0}
+									className={'listGroup' + colors.color0}
 									onClick={handleChoice}
 								/>
 							</InputGroup.Prepend>
@@ -128,7 +128,7 @@ function Quiz(props) {
 									name='choice'
 									id='question'
 									value={1}
-									className={colors.color1}
+									className={'listGroup' + colors.color1}
 									onClick={handleChoice}
 								/>
 							</InputGroup.Prepend>
@@ -147,7 +147,7 @@ function Quiz(props) {
 									name='choice'
 									id='question'
 									value={2}
-									className={colors.color2}
+									className={'listGroup' + colors.color2}
 									onClick={handleChoice}
 								/>
 							</InputGroup.Prepend>
@@ -166,7 +166,7 @@ function Quiz(props) {
 									name='choice'
 									id='question'
 									value={3}
-									className={colors.color3}
+									className={'listGroup' + colors.color3}
 									onClick={handleChoice}
 								/>
 							</InputGroup.Prepend>
@@ -178,7 +178,6 @@ function Quiz(props) {
 					</ListGroup.Item>
 				</ListGroup>
 				<button type='submit'>Submit</button>
-				<button>Answer</button>
 			</form>
 		</Container>
 	);

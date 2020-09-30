@@ -1,24 +1,41 @@
 .item{
     height: 50px;
+    background: #FFF9EB;
 }
 .prepend{
-    background: white;
+    background: #FFF9EB;
     margin-top: 5px;
+
     
+}
+form{
+    background-color: #FFF9EB;
+}
+.listGroup{
+    background-color: #FFF9EB;
 }
 .choice{
 margin-left:10px ;
+background: #FFF9EB;
 }
 .radioInput{
     padding: 5px 0;
+    background: #FFF9EB;
 }
 
 .right{
     color: #447F3A;
+    background: #FFF9EB;
 }
 .wrong{
     color: #C65D4C;
+    background: #FFF9EB;
 }
 .normal{
     color: black;
+    background: #FFF9EB;
+}
+.quizContainer{
+    background: #FFF9EB;
+    height: 100vh;
 }
