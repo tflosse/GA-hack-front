@@ -1,0 +1,24 @@
+.item{
+    height: 50px;
+}
+.prepend{
+    background: white;
+    margin-top: 5px;
+    
+}
+.choice{
+margin-left:10px ;
+}
+.radioInput{
+    padding: 5px 0;
+}
+
+.right{
+    color: #447F3A;
+}
+.wrong{
+    color: #C65D4C;
+}
+.normal{
+    color: black;
+}
