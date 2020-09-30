@@ -1,12 +1,11 @@
-import React from 'react';
-import './App.css';
-import Results from './components/routes/Results'
-import { Route } from "react-router-dom";
+import React from "react";
+import "./App.css";
+import Results from "./components/routes/Results";
 
 function App() {
   return (
     <div className="App">
-       <Route exact path="/" component={Results} />
+      <Results />
       {/* <h1>This is the Main Quiz Panel</h1> */}
     </div>
   );

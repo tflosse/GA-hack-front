@@ -5,6 +5,7 @@ import "./resultsPopUp.css";
 const ResultsPopUp = () => {
   return (
     <div className="resultsPopUp">
+      <h1>Your Results</h1>
       <div className="allResultsBars">
         <div className="resultsBar">
           <p>Federal</p>
@@ -31,7 +32,7 @@ const ResultsPopUp = () => {
           <ProgressBar width="100" trackWidth="13" percentage="100" />
         </div>
       </div>
-      <div className="resultInfo">
+      <div className="resultsInfo">
         <h1>Your Results</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor

@@ -3,8 +3,11 @@
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 20px;
+}
+
+.allResultsBars {
+  padding: 15px;
 }
 
 .resultsBar {
@@ -16,5 +19,38 @@
   width: 100px;
 }
 
+.resultsInfo p {
+    padding: 5px;
+}
+
+.resultsInfo h1 {
+    display: none;
+}
+
 @media only screen and (min-width: 768px) {
+    .resultsPopUp {
+        margin: 100px 100px 100px 100px;
+        flex-direction: row;
+    }
+
+    .allResultsBars {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+    }
+
+    .resultsPopUp h1 {
+        display: none;
+    }
+
+    .resultsInfo h1 {
+        display: block;
+    }
+
+    .resultsInfo {
+        text-align: left;
+        width: 30%;
+    }
+
 }
