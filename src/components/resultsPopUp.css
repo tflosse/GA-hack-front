@@ -1,9 +1,20 @@
 .resultsPopUp {
+  border: 1px solid black;
+  margin: 20px;
+  position: relative;
+}
+
+.exitLogo {
+  font-size: 25px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.resultsPopUpMain {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
-  margin: 20px;
 }
 
 .allResultsBars {
@@ -20,37 +31,44 @@
 }
 
 .resultsInfo p {
-    padding: 5px;
+  padding: 5px;
 }
 
 .resultsInfo h1 {
-    display: none;
+  display: none;
+}
+
+.socialLogo {
+  font-size: 30px;
+  padding: 2px;
 }
 
 @media only screen and (min-width: 768px) {
-    .resultsPopUp {
-        margin: 100px 100px 100px 100px;
-        flex-direction: row;
-    }
+  .resultsPopUp {
+    margin: 100px 100px 100px 100px;
+  }
 
-    .allResultsBars {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 60%;
-    }
+  .resultsPopUpMain {
+    flex-direction: row;
+  }
 
-    .resultsPopUp h1 {
-        display: none;
-    }
+  .allResultsBars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+  }
 
-    .resultsInfo h1 {
-        display: block;
-    }
+  .resultsPopUpMain h1 {
+    display: none;
+  }
 
-    .resultsInfo {
-        text-align: left;
-        width: 30%;
-    }
+  .resultsInfo h1 {
+    display: block;
+  }
 
+  .resultsInfo {
+    text-align: left;
+    width: 30%;
+  }
 }
