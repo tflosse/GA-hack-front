@@ -35,24 +35,31 @@
 .resultsPopUpMain h1 {
   font-family: "Spectral", serif;
   font-weight: normal;
+  margin-top: 20px;
 }
 
 .allResultsBars {
-  padding: 15px;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .resultsBar {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .resultsBar p {
   width: 100px;
   font-family: "Mulish", sans-serif;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 20px;
 }
 
 .resultsInfo {
-    margin-top: 30px;
+  margin-top: 20px;
 }
 
 .resultsInfo p {
@@ -68,6 +75,11 @@
   padding: 5px;
 }
 
+.progress-bar {
+  background-color: #fffde8 !important;
+  color: black !important;
+}
+
 @media only screen and (min-width: 768px) {
   .resultsPopUpInner {
     margin: 100px 100px 100px 100px;
@@ -78,10 +90,17 @@
   }
 
   .allResultsBars {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 60%;
+  }
+
+  .allResultsBarColumn1 {
+    margin-right: 30px;
+  }
+
+  .allResultsBarColumn2 {
+    margin-left: 30px;
   }
 
   .resultsPopUpMain h1 {
