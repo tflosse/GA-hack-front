@@ -40,8 +40,13 @@
 
 .allResultsBars {
   display: flex;
+  flex-direction: column;
   margin-top: 20px;
   margin-bottom: 30px;
+}
+
+.allResultsBarColumn {
+  display: flex;
 }
 
 .resultsBar {
@@ -95,12 +100,8 @@
     width: 60%;
   }
 
-  .allResultsBarColumn1 {
-    margin-right: 30px;
-  }
-
-  .allResultsBarColumn2 {
-    margin-left: 30px;
+  .resultsBar {
+    margin: 10px;
   }
 
   .resultsPopUpMain h1 {
