@@ -1,0 +1,14 @@
+.item{
+    height: 50px;
+}
+.prepend{
+    background: white;
+    margin-top: 5px;
+    
+}
+.choice{
+margin-left:10px ;
+}
+.radio{
+    padding: 5px 0;
+}
