@@ -3,7 +3,7 @@
 }
 
 .resultsPopUp {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -11,10 +11,11 @@
 }
 
 .resultsPopUpInner {
-  border: 1px solid black;
   margin: 20px;
   position: relative;
-  background-color: white;
+  background: #fffde8;
+  padding: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .exitLogo {
@@ -31,6 +32,11 @@
   align-items: center;
 }
 
+.resultsPopUpMain h1 {
+  font-family: "Spectral", serif;
+  font-weight: normal;
+}
+
 .allResultsBars {
   padding: 15px;
 }
@@ -42,10 +48,15 @@
 
 .resultsBar p {
   width: 100px;
+  font-family: "Mulish", sans-serif;
+}
+
+.resultsInfo {
+    margin-top: 30px;
 }
 
 .resultsInfo p {
-  padding: 5px;
+  font-family: "Mulish", sans-serif;
 }
 
 .resultsInfo h1 {
@@ -53,8 +64,8 @@
 }
 
 .socialLogo {
-  font-size: 30px;
-  padding: 2px;
+  font-size: 40px;
+  padding: 5px;
 }
 
 @media only screen and (min-width: 768px) {

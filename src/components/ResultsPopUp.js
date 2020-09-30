@@ -26,8 +26,8 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 trackWidth="13"
                 percentage="100"
                 defColor={{
-                  good: "red",
-                  excellent: "blue",
+                  good: "#C65D4C",
+                  excellent: "#3A537F",
                 }}
               />
             </div>
@@ -38,8 +38,8 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 trackWidth="13"
                 percentage="100"
                 defColor={{
-                  good: "red",
-                  excellent: "blue",
+                  good: "#C65D4C",
+                  excellent: "#3A537F",
                 }}
               />
             </div>
@@ -50,8 +50,8 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 trackWidth="13"
                 percentage="0"
                 defColor={{
-                  good: "red",
-                  excellent: "blue",
+                  good: "#C65D4C",
+                  excellent: "#3A537F",
                 }}
               />
             </div>
@@ -62,8 +62,8 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 trackWidth="13"
                 percentage="50"
                 defColor={{
-                  good: "red",
-                  excellent: "blue",
+                  good: "#C65D4C",
+                  excellent: "#3A537F",
                 }}
               />
             </div>
@@ -74,8 +74,8 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 trackWidth="13"
                 percentage="0"
                 defColor={{
-                  good: "red",
-                  excellent: "blue",
+                  good: "#C65D4C",
+                  excellent: "#3A537F",
                 }}
               />
             </div>
@@ -86,8 +86,8 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 trackWidth="13"
                 percentage="100"
                 defColor={{
-                  good: "red",
-                  excellent: "blue",
+                  good: "#C65D4C",
+                  excellent: "#3A537F",
                 }}
               />
             </div>
@@ -100,8 +100,10 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
               habitant vitae rutrum pharetra ut leo. Interdum ornare donec a
               molestie morbi sed non, et ac.
             </p>
+            <br/>
             <br />
             <p>Shared with friends</p>
+            <br/>
             <FontAwesomeIcon icon={faFacebookSquare} className="socialLogo" />
             <FontAwesomeIcon icon={faInstagramSquare} className="socialLogo" />
             <FontAwesomeIcon icon={faTwitter} className="socialLogo" />
