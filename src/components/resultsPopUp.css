@@ -3,9 +3,18 @@
 }
 
 .resultsPopUp {
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+}
+
+.resultsPopUpInner {
   border: 1px solid black;
   margin: 20px;
   position: relative;
+  background-color: white;
 }
 
 .exitLogo {
@@ -49,7 +58,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .resultsPopUp {
+  .resultsPopUpInner {
     margin: 100px 100px 100px 100px;
   }
 

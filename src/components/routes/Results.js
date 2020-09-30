@@ -5,8 +5,9 @@ const Results = () => {
   const [isPopUp, setIsPopUp] = useState(true);
 
   return (
-    <div>
+    <div className="results">
       <ResultsPopUp isPopUp={isPopUp} setIsPopUp={setIsPopUp} />
+      <h1>You're ready to vote!</h1>
     </div>
   );
 };
