@@ -63,7 +63,7 @@
 
 /* Footer  */
 .Footer {
-    position: fixed;
+    position: absolute;
     bottom: 1vh;
     right: 7vw;
     font-size: 0.5rem;

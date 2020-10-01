@@ -38,8 +38,8 @@ const Nav = (props) => {
         <button className="Mobile-close" onClick={handleCollapse}>
             <span className="material-icons Nav-button">close</span>{" "}
         </button>
-          <Link to="/about" className="Nav-links">About</Link>
-          <Link to="/currentofficials" className="Nav-links" id="current">Current Officials</Link>
+          <Link to="/about" onClick={handleCollapse} className="Nav-links">About</Link>
+          <Link to="/currentofficials" onClick={handleCollapse} className="Nav-links" id="current">Current Officials</Link>
       </div>
     </div>
   );
