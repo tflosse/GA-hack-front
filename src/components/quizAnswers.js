@@ -2,21 +2,26 @@ const questionsAndAnswers = [
 	{
 		section: [
 			{
-				question:
-					'Who is your representative? Hint: your district is California’s 33rd Congressional District.',
+				question: 'Who is your representative?',
+				hint:
+					'Hint: your district is California’s 33rd Congressional District.',
 				choices: [
-					'Kamala Harris',
-					'Arnold Schwarzenegger',
 					'Ted Lieu',
+					'Arnold Schwarzenegger',
+					'Kamala Harris',
 					'Dianne Feinstein',
 				],
 				answer: 0,
+				additionalInfo:
+					'The District Attorney is the chief legal representative of the county. Incumbent Jackie Lacey and George Gascón are running in the general election for Los Angeles County District Attorney on November 3, 2020.',
 			},
 			{
 				question:
 					'Not sure if you’ve heard, but there are people running for President of the United States this year! Which one of these individuals is not on the ballot?',
 				choices: ['Kanye West', 'Howie Hawkins', 'Donald Trump', 'Joe Biden'],
 				answer: 1,
+				additionalInfo:
+					'Member of a board responsible for overseeing library operations within the district.',
 			},
 		],
 	},
@@ -32,11 +37,15 @@ const questionsAndAnswers = [
 					'California State House',
 				],
 				answer: 1,
+				additionalInfo:
+					'In 2020, all 80 assembly seats are up for election. Members of the California State Assembly serve two-year terms, with every seat up for election each even-numbered year.',
 			},
 			{
 				question: 'California State Assembly consists of how many members?',
 				choices: ['12', '150', '80', '37'],
 				answer: 3,
+				additionalInfo:
+					'The District Attorney is the chief legal representative of the county. Incumbent Jackie Lacey and George Gascón are running in the general election for Los Angeles County District Attorney on November 3, 2020.',
 			},
 		],
 	},
