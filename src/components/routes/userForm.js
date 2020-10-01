@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../Main.css";
 
-const userForm = ({ address, handleChange, handleSubmit }) => {
+const UserForm = ({ address, handleChange, handleSubmit }) => {
   
   const [mobile, setMobile] = useState(true)
     useEffect(() => {
@@ -38,4 +38,4 @@ const userForm = ({ address, handleChange, handleSubmit }) => {
     </div>
   );
 };
-export default userForm;
+export default UserForm;
