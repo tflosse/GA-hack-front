@@ -2,8 +2,7 @@ const questionsAndAnswers = [
 	{
 		section: [
 			{
-				question:
-					'Not sure if you’ve heard, but there are people running for President of the United States this year! Which one of these individuals is not on the ballot? ',
+				question: 'Who is your representative?',
 				hint:
 					'Hint: your district is California’s 33rd Congressional District.',
 				choices: [
