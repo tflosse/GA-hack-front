@@ -6,15 +6,20 @@ import LocalOfficials from "../LocalOfficials";
 
 const CurrentOfficials = () => {
   const key = process.env.REACT_APP_api_key;
+  // const [address, setAddress] = useState(
+  //   "1%20East%20Elliott%20St.%2C%20Charleston%2C%20South%20Carolina%2029401"
+  // );
   const [address, setAddress] = useState(
-    "1%20East%20Elliott%20St.%2C%20Charleston%2C%20South%20Carolina%2029401"
+    "51%20Rose%20Ave%2C%20Venice%2C%20CA%2090291"
   );
+
   const [fedReps, setFedReps] = useState(null);
   // get specific name info from fedReps object
   const [fedRepsNames, setFedRepsNames] = useState(null);
 
   const [stateReps, setStateReps] = useState(null);
   const [stateRepsNames, setStateRepsNames] = useState(null);
+  console.log(stateRepsNames);
 
   const [localReps, setLocalReps] = useState(null);
   const [localRepsNames, setLocalRepsNames] = useState(null);

@@ -10,23 +10,40 @@ const StateOfficials = ({ stateReps, stateRepsNames, isState }) => {
         ? stateReps.offices.map((office) => {
             return office.officialIndices.map((official) => {
               return (
-                <div className="stateOfficialsCard">
+                <>
                   {stateRepsNames ? (
-                    <div>
-                      {stateRepsNames[official].photoUrl ? (
-                        <img
-                          className="stateOfficialsImg"
-                          src={stateRepsNames[official].photoUrl}
-                          alt={stateRepsNames[official].name}
-                        />
-                      ) : (
-                        <FontAwesomeIcon icon={faUser} className="placeholder"/>
-                      )}
+                    <div className="stateOfficialsCard">
+                      <div>
+                        {stateRepsNames[official].photoUrl ? (
+                          <img
+                            className={`stateOfficialsImg ${
+                              stateRepsNames[official].party ===
+                              "Republican Party"
+                                ? "red"
+                                : ""
+                            }`}
+                            src={stateRepsNames[official].photoUrl}
+                            alt={stateRepsNames[official].name}
+                          />
+                        ) : (
+                          <FontAwesomeIcon
+                            icon={faUser}
+                            className={`placeholder ${
+                              stateRepsNames[official].party ===
+                              "Republican Party"
+                                ? "red"
+                                : ""
+                            }`}
+                          />
+                        )}
+                      </div>
+                      <p className="realName">
+                        {stateRepsNames ? stateRepsNames[official].name : null}
+                      </p>
+                      <p className="title">{office.name}</p>
                     </div>
                   ) : null}
-                  <p>{stateRepsNames ? stateRepsNames[official].name : null}</p>
-                  <p>{office.name}</p>
-                </div>
+                </>
               );
             });
           })

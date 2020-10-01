@@ -14,15 +14,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 350px;
+  height: 300px;
   width: 300px;
 }
 
 .stateOfficialsImg {
-  width: 200px;
-  border-radius: 100px;
+  width: 150px;
+  border-radius: 75px;
+  border: 5px solid #3a537f;
 }
 
-.placeholder {
-  font-size: 200px;
+.stateOfficialsImg.red {
+  border: 5px solid #c65d4c;
 }

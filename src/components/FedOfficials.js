@@ -10,26 +10,40 @@ const FedOfficials = ({ fedReps, fedRepsNames, isFed }) => {
         ? fedReps.offices.map((office) => {
             return office.officialIndices.map((official) => {
               return (
-                <div className="fedOfficialsCard">
+                <>
                   {fedRepsNames ? (
-                    <div>
-                      {fedRepsNames[official].photoUrl ? (
-                        <img
-                          className="fedOfficialsImg"
-                          src={fedRepsNames[official].photoUrl}
-                          alt={fedRepsNames[official].name}
-                        />
-                      ) : (
-                        <FontAwesomeIcon
-                          icon={faUser}
-                          className="placeholder"
-                        />
-                      )}
+                    <div className="fedOfficialsCard">
+                      <div>
+                        {fedRepsNames[official].photoUrl ? (
+                          <img
+                            className={`fedOfficialsImg ${
+                              fedRepsNames[official].party ===
+                              "Republican Party"
+                                ? "red"
+                                : ""
+                            }`}
+                            src={fedRepsNames[official].photoUrl}
+                            alt={fedRepsNames[official].name}
+                          />
+                        ) : (
+                          <FontAwesomeIcon
+                            icon={faUser}
+                            className={`placeholder ${
+                              fedRepsNames[official].party ===
+                              "Republican Party"
+                                ? "red"
+                                : ""
+                            }`}
+                          />
+                        )}
+                      </div>
+                      <p className="realName">
+                        {fedRepsNames ? fedRepsNames[official].name : null}
+                      </p>
+                      <p className="title">{office.name}</p>
                     </div>
                   ) : null}
-                  <p>{fedRepsNames ? fedRepsNames[official].name : null}</p>
-                  <p>{office.name}</p>
-                </div>
+                </>
               );
             });
           })

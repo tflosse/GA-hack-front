@@ -10,26 +10,31 @@ const LocalOfficials = ({ localReps, localRepsNames, isLocal }) => {
         ? localReps.offices.map((office) => {
             return office.officialIndices.map((official) => {
               return (
-                <div className="localOfficialsCard">
+                <>
                   {localRepsNames ? (
-                    <div>
-                      {localRepsNames[official].photoUrl ? (
-                        <img
-                          className="localOfficialsImg"
-                          src={localRepsNames[official].photoUrl}
-                          alt={localRepsNames[official].name}
-                        />
-                      ) : (
-                        <FontAwesomeIcon
-                          icon={faUser}
-                          className="placeholder"
-                        />
-                      )}
+                    <div className="localOfficialsCard">
+                      <div>
+                        {localRepsNames[official].photoUrl ? (
+                          <img
+                            className="localOfficialsImg"
+                            src={localRepsNames[official].photoUrl}
+                            alt={localRepsNames[official].name}
+                          />
+                        ) : (
+                          <FontAwesomeIcon
+                            icon={faUser}
+                            className="localPlaceholder"
+                          />
+                        )}
+                      </div>
+                      <p className="realName">
+                        {localRepsNames ? localRepsNames[official].name : null}
+                      </p>
+                      <p className="title">{office.name}</p>
+                      <p className="title">{localRepsNames[official].party}</p>
                     </div>
                   ) : null}
-                  <p>{localRepsNames ? localRepsNames[official].name : null}</p>
-                  <p>{office.name}</p>
-                </div>
+                </>
               );
             });
           })

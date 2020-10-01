@@ -12,15 +12,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 350px;
+  height: 300px;
   width: 300px;
 }
 
 .localOfficialsImg {
-  width: 200px;
-  border-radius: 100px;
+  width: 150px;
+  border-radius: 75px;
 }
 
-.placeholder {
-  font-size: 200px;
+.localPlaceholder {
+  font-size: 150px;
 }
