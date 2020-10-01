@@ -1,0 +1,40 @@
+
+.correctAnswer{
+    color: #447F3A;
+    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
+}
+.theQuestion{
+    font-size: 14px;
+    color: #484848;
+    font-family: 'Mulish', sans-serif;
+}
+.feedback{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+}
+.firstColumn, .secondColumn{
+    width: 100%;
+}
+@media (min-width: 1000px) {
+.feedback{
+    flex-direction: row;
+}
+.vl{
+    border-left: 1px solid #3A537F;
+  height: 500px;
+}
+.firstColumn, .secondColumn{
+    width: 50%;
+}
+.firstColumn{
+    margin-top: 50px;
+}
+.secondColumn{
+    margin-top: 150px;
+    margin-left: 50px;
+    font-family: 'Mulish', sans-serif;
+}
+}
