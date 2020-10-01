@@ -3,17 +3,33 @@ import { Container, InputGroup, ListGroup } from 'react-bootstrap';
 import questionsAndAnswers from './quizAnswers';
 import './Quiz.css';
 import Feedback from './Feedback';
-function Quiz(props) {
+import ResultsPopUp from './ResultsPopUp';
+function Quiz({
+	setFederal,
+	setState,
+	setLocal,
+	setJudicial,
+	setMeasures,
+	setBonus,
+	federal,
+	state,
+	local,
+	judicial,
+	measures,
+	bonus,
+}) {
 	const [section, setSection] = useState(0); // federal = 0, state = 1, local = 2, judicial = 3, measures = 4, general = 5
 	const [count, setCount] = useState(0);
-    const [userChoice, setUserChoice] = useState(0);
-    let answer = questionsAndAnswers[section].section[count].answer;
-    let question = questionsAndAnswers[section].section[count].question;
+	const [userChoice, setUserChoice] = useState(0);
+	let answer = questionsAndAnswers[section].section[count].answer;
+	let question = questionsAndAnswers[section].section[count].question;
 	const [correct, setCorrect] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
-    const [submitClass, setSubmitClass] = useState('greySubmit')
+	const [submitClass, setSubmitClass] = useState('greySubmit');
+	//SCORES for sections
+
 	//colors for each option
-    const [showAnswer, setShowAnswer] = useState(false)
+	const [showAnswer, setShowAnswer] = useState(false);
 	const [colors, setColors] = useState({
 		color0: 'normal',
 		color1: 'normal',
@@ -24,21 +40,59 @@ function Quiz(props) {
 	function handleChoice(event) {
 		let value = parseInt(event.target.value);
 		setUserChoice(value);
+		setSubmitClass('submit');
 		if (submitted) {
 			event.preventDefault();
 		}
 	}
+	const handleNextQuestion = (event) => {
+		event.preventDefault();
 
+		setShowAnswer(false);
+		setSubmitClass('greySubmit');
+
+		if (count === 1) {
+			setSection(section + 1);
+			setCount(0);
+			setSubmitted(false);
+			setShowAnswer(false);
+		} else {
+			setCount(count + 1);
+			setSubmitted(false);
+			setShowAnswer(false);
+		}
+		setColors({
+			color0: 'normal',
+			color1: 'normal',
+			color2: 'normal',
+			color3: 'normal',
+		});
+	};
 	const handleSubmit = (event) => {
-        event.preventDefault();
-        setTimeout(()=> {
-					setShowAnswer(true)
-				}, 3000);
-        setSubmitClass('submit')
+		event.preventDefault();
+		setTimeout(() => {
+			setShowAnswer(true);
+			setSubmitClass('greySubmit');
+		}, 3000);
+
 		if (!submitted) {
 			setSubmitted(true);
 			if (userChoice === answer) {
 				setCorrect(true);
+				if (section === 0) {
+					setFederal(federal + 1);
+				} else if (section === 1) {
+					setState(state + 1);
+				} else if (section === 2) {
+					setLocal(local + 1);
+				} else if (section === 3) {
+					setJudicial(judicial + 1);
+				} else if (section === 4) {
+					setMeasures(measures + 1);
+				} else if (section === 5) {
+					setBonus(bonus + 1);
+				}
+
 				if (userChoice === 0) {
 					setColors({
 						color0: 'right',
@@ -101,9 +155,20 @@ function Quiz(props) {
 			}
 		}
 	};
-let hint = questionsAndAnswers[section].section[count].hint;
+	let hint = questionsAndAnswers[section].section[count].hint;
 	return (
 		<Container className='quizContainer'>
+			<div className='arrows'>
+				<i
+					className='far fa-arrow-alt-circle-left'
+					style={{ fontSize: 36 + 'px' }}></i>
+				<i
+					className='far fa-arrow-alt-circle-right'
+					style={{ fontSize: 36 + 'px' }}
+					onClick={handleNextQuestion}></i>
+				{/* <a className='carouselButtonPrev'></a>
+				<a className='carouselButtonNext'></a> */}
+			</div>
 			{showAnswer ? (
 				<Feedback
 					answer={choices[answer]}
@@ -115,7 +180,7 @@ let hint = questionsAndAnswers[section].section[count].hint;
 			) : (
 				<div>
 					<h3 className='question'>{question}</h3>
-					<p>{hint ? hint : ''}</p>
+					<p className='hint'>{hint ? hint : ''}</p>
 					<form onSubmit={handleSubmit}>
 						<ListGroup className='listGroup'>
 							<ListGroup.Item className='item'>
@@ -206,7 +271,6 @@ let hint = questionsAndAnswers[section].section[count].hint;
 							<button type='submit' className={submitClass}>
 								Submit
 							</button>
-							<button className={submitClass}>Answer</button>
 						</div>
 					</form>
 				</div>

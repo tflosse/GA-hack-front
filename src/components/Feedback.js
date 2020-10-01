@@ -10,9 +10,7 @@ function Feedback({ question, answer, additionalInfo }) {
 
 			<div className='vl'></div>
 			<div className='secondColumn'>
-				<p>
-					{additionalInfo}
-				</p>
+				<p>{additionalInfo}</p>
 			</div>
 		</div>
 	);
