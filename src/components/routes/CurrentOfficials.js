@@ -19,10 +19,8 @@ const CurrentOfficials = ({ address }) => {
   const [fedRepsNames, setFedRepsNames] = useState(null);
 
   const [stateReps, setStateReps] = useState(null);
-
+  console.log(stateReps);
   const [stateRepsNames, setStateRepsNames] = useState(null);
-
-  const [stateName, setStateName] = useState(null);
 
   const [localReps, setLocalReps] = useState(null);
 
@@ -55,7 +53,6 @@ const CurrentOfficials = ({ address }) => {
     const json = await res.json();
     setStateReps(json);
     setStateRepsNames(json.officials);
-    setStateName(json.normalizedInput.state);
   };
 
   const makeLocalApiCall = async () => {
