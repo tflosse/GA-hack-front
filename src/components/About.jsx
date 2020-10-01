@@ -12,7 +12,7 @@ const About = ({address, handleChange, handleSubmit}) => {
   
     return (
     <div className="About-panel">
-        <h4>Vote informed.</h4>
+        <h4 className="Informed">Vote informed.</h4>
         <div className={`${mobile ? `hidden`:`About-left`}`}>
             <h2>
                 Our mission is to help voters get acquainted with offices,
@@ -24,7 +24,7 @@ const About = ({address, handleChange, handleSubmit}) => {
                 used to seeing a lot of unfamiliar names on your ballot. You may have a
                 top-level candidate in mind, but it’s tough to have a well formed
                 opinion about offices you might have never heard of!
-                <br />
+                <br /><br />
                 Our quiz gives you a few tidbits and a direct link to each candidate’s
                 campaign website so you can make the best possible choice.
             </p>
@@ -41,12 +41,12 @@ const About = ({address, handleChange, handleSubmit}) => {
             </p>
         </div>
         <div className="About-right">
-            <p>Ready?
+            <p>Ready to take the quiz?
                 <br />
                 Enter your address below to get started.
             </p>
             <input
-            className="Address-input"
+            className="Address-input" id="About-input"
             placeholder="1234 1st Ave, New York, NY 10014"
             value={address}
             name="address"
@@ -54,7 +54,7 @@ const About = ({address, handleChange, handleSubmit}) => {
             />
             <div className="Start-button-div">
             <Link to="/quiz">
-                <button className="Start-button" type="submit" onClick={handleSubmit}>
+                <button className="Start-button" id="About-button" type="submit" onClick={handleSubmit}>
                 Get Started
                 </button>
             </Link>
