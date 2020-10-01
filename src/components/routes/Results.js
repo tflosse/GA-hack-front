@@ -2,12 +2,21 @@ import React, { useState } from "react";
 import ResultsPopUp from "../ResultsPopUp";
 import "./results.css";
 
-const Results = () => {
+const Results = ({ federal, state, local, judicial, measures, bonus }) => {
   const [isPopUp, setIsPopUp] = useState(true);
 
   return (
     <div className="results">
-      <ResultsPopUp isPopUp={isPopUp} setIsPopUp={setIsPopUp} />
+      <ResultsPopUp
+        isPopUp={isPopUp}
+        setIsPopUp={setIsPopUp}
+        federal={federal}
+        state={state}
+        local={local}
+        judicial={judicial}
+        measures={measures}
+        bonus={bonus}
+      />
       <h1 className="resultsHeader">You're ready to vote!</h1>
       <div className="resultsMain">
         <p className="resultsSubHeader"> Next steps:</p>

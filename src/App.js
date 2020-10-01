@@ -77,12 +77,6 @@ function App() {
             render={() => {
               return (
                 <Results
-                  setFederal={setFederal}
-                  setState={setState}
-                  setLocal={setLocal}
-                  setJudicial={setJudicial}
-                  setMeasures={setMeasures}
-                  setBonus={setBonus}
                   federal={federal}
                   state={state}
                   local={local}
