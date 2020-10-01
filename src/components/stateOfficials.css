@@ -1,0 +1,29 @@
+.stateOfficials.hide {
+  display: none;
+}
+
+.stateOfficials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.stateOfficialsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+}
+
+.stateOfficialsImg {
+  width: 150px;
+  border-radius: 75px;
+  border: 5px solid #3a537f;
+}
+
+.stateOfficialsImg.red {
+  border: 5px solid #c65d4c;
+}

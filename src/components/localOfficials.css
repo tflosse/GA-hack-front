@@ -1,0 +1,26 @@
+.localOfficials.hide {
+  display: none;
+}
+
+.localOfficials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.localOfficialsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+}
+
+.localOfficialsImg {
+  width: 150px;
+  border-radius: 75px;
+}
+
+.localPlaceholder {
+  font-size: 150px;
+}

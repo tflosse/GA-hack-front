@@ -5,7 +5,9 @@ import Layout from "./components/Layout";
 import Quiz from "./components/Quiz";
 import Results from "./components/routes/Results";
 import About from "./components/About"
-import UserForm from "./components/routes/userForm";
+import UserForm from "./components/routes/UserForm";
+import CurrentOfficials from "./components/routes/CurrentOfficials";
+
 
 function App() {
   const [federal, setFederal] = useState(0);
@@ -85,6 +87,8 @@ function App() {
 					/>
 
           <Route path="/about" component={About} />
+          <Route path="/currentofficials" component={CurrentOfficials} />
+              
 				</Layout>
 			</Switch>
 		</div>
