@@ -21,21 +21,33 @@ const Results = ({ federal, state, local, judicial, measures, bonus }) => {
       <div className="resultsMain">
         <p className="resultsSubHeader"> Next steps:</p>
         <div className="nextSteps">
-          <p className="step">
-            Invite your friends <br /> to take the quiz!
-          </p>
-          <p className="step">
-            Register to vote <br /> by _______
-          </p>
-          <p className="step">
-            Find your poll <br /> locations
-          </p>
-          <p className="step">
-            Mail in your ballot <br /> by ______
-          </p>
-          <p className="step">
-            Election Day <br /> 11/3
-          </p>
+          <div className="dots">
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+          </div>
+          <div className="eachNextStep">
+            <p className="step">
+              Invite your friends <br /> to take the quiz!
+            </p>
+            <p className="step">
+              Register to vote <br /> by _______
+            </p>
+            <p className="step">
+              Find your poll <br /> locations
+            </p>
+            <p className="step">
+              Mail in your ballot <br /> by ______
+            </p>
+            <p className="step last">
+              Election Day <br /> 11/3
+            </p>
+          </div>
+          <div className="additionalInfo">
+
+          </div>
         </div>
       </div>
     </div>
