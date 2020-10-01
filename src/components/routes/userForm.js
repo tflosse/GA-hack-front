@@ -21,7 +21,7 @@ const UserForm = ({ address, handleChange, handleSubmit }) => {
           <button className="Start-button" type="submit">
             Get Started
           </button>
-          <p>We need your full address for results for your district.</p>
+          <p>We need your address to get results for your district.</p>
         </div>
       </form>
     </div>
