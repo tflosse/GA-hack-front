@@ -2,10 +2,12 @@
 .correctAnswer{
     color: #447F3A;
     font-size: 16px;
+    font-family: 'Mulish', sans-serif;
 }
 .theQuestion{
     font-size: 14px;
     color: #484848;
+    font-family: 'Mulish', sans-serif;
 }
 .feedback{
     display: flex;
@@ -26,5 +28,13 @@
 }
 .firstColumn, .secondColumn{
     width: 50%;
+}
+.firstColumn{
+    margin-top: 50px;
+}
+.secondColumn{
+    margin-top: 150px;
+    margin-left: 50px;
+    font-family: 'Mulish', sans-serif;
 }
 }
