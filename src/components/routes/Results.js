@@ -20,6 +20,13 @@ const Results = ({ federal, state, local, judicial, measures, bonus }) => {
       <h1 className="resultsHeader">You're ready to vote!</h1>
       <div className="resultsMain">
         <p className="resultsSubHeader"> Next steps:</p>
+        <div className="dots">
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+        </div>
         <div className="nextSteps">
           <p className="step">
             Invite your friends <br /> to take the quiz!

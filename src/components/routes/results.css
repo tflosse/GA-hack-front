@@ -47,4 +47,17 @@
     display: flex;
     justify-content: space-around;
   }
+
+  .dots {
+    display: flex;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    background: black;
+    border-radius: 8px;
+  }
+
+
 }
