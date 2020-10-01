@@ -7,7 +7,17 @@ import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import { faInstagramSquare } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
+const ResultsPopUp = ({
+  isPopUp,
+  setIsPopUp,
+  federal,
+  state,
+  local,
+  judicial,
+  measures,
+  bonus,
+}) => {
+
   return (
     <div className={`resultsPopUp ${isPopUp ? null : "hide"}`}>
       <div className="resultsPopUpInner">
@@ -25,7 +35,7 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 <ProgressBar
                   width="150"
                   trackWidth="13"
-                  percentage="100"
+                  percentage={`${federal * 50}`}
                   defColor={{
                     good: "#C65D4C",
                     excellent: "#3A537F",
@@ -37,7 +47,7 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 <ProgressBar
                   width="150"
                   trackWidth="13"
-                  percentage="100"
+                  percentage={`${state * 50}`}
                   defColor={{
                     good: "#C65D4C",
                     excellent: "#3A537F",
@@ -49,7 +59,7 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 <ProgressBar
                   width="150"
                   trackWidth="13"
-                  percentage="0"
+                  percentage={`${local * 50}`}
                   defColor={{
                     good: "#C65D4C",
                     excellent: "#3A537F",
@@ -63,7 +73,7 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 <ProgressBar
                   width="150"
                   trackWidth="13"
-                  percentage="50"
+                  percentage={`${judicial * 50}`}
                   defColor={{
                     good: "#C65D4C",
                     excellent: "#3A537F",
@@ -75,7 +85,7 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 <ProgressBar
                   width="150"
                   trackWidth="13"
-                  percentage="0"
+                  percentage={`${measures * 50}`}
                   defColor={{
                     good: "#C65D4C",
                     excellent: "#3A537F",
@@ -87,7 +97,7 @@ const ResultsPopUp = ({ isPopUp, setIsPopUp }) => {
                 <ProgressBar
                   width="150"
                   trackWidth="13"
-                  percentage="100"
+                  percentage={`${bonus * 50}`}
                   defColor={{
                     good: "#C65D4C",
                     excellent: "#3A537F",

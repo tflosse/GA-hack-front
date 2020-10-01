@@ -4,7 +4,7 @@
 }
 
 .results {
-  background: #fffde8;
+  background: #fff9eb;
   height: 100vh;
 }
 
@@ -26,25 +26,25 @@
 }
 
 .step {
-    text-align: left;
-    padding-left: 20px;
-    padding-top: 20px;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 @media only screen and (min-width: 768px) {
-    .resultsHeader {
-        text-align: left;
-        padding-left: 50px;
-    }
+  .resultsHeader {
+    text-align: left;
+    padding-left: 50px;
+  }
 
-    .resultsSubHeader {
-        padding-left: 50px;
-    }
+  .resultsSubHeader {
+    padding-left: 50px;
+  }
 
-    .nextSteps {
-        margin-top: 50px;
-        border-top: 1px solid black;
-        display: flex;
-        justify-content: space-around;
-    }
+  .nextSteps {
+    margin-top: 50px;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+  }
 }
