@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const LocalOfficials = ({ localReps, localRepsNames, isLocal }) => {
+  console.log(localReps);
   return (
     <div className={`localOfficials ${isLocal ? null : "hide"}`}>
       {localReps
@@ -13,7 +14,11 @@ const LocalOfficials = ({ localReps, localRepsNames, isLocal }) => {
                 <>
                   {localRepsNames ? (
                     <a
-                      href={localRepsNames[official].urls[0]}
+                      href={
+                        localRepsNames[official].urls
+                          ? localRepsNames[official].urls[0]
+                          : "https://www.vote.org/"
+                      }
                       target="_blank"
                       className="link"
                     >

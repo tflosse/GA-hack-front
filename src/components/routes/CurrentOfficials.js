@@ -4,8 +4,7 @@ import FedOfficials from "../FedOfficials";
 import StateOfficials from "../StateOfficials";
 import LocalOfficials from "../LocalOfficials";
 
-const CurrentOfficials = ({address}) => {
-  console.log("Passed from App:", address)
+const CurrentOfficials = ({ address }) => {
   const key = process.env.REACT_APP_api_key;
 
   const reformatAddress = (address) => {
@@ -15,23 +14,26 @@ const CurrentOfficials = ({address}) => {
   };
 
   const [fedReps, setFedReps] = useState(null);
+
   // get specific name info from fedReps object
   const [fedRepsNames, setFedRepsNames] = useState(null);
 
   const [stateReps, setStateReps] = useState(null);
+
   const [stateRepsNames, setStateRepsNames] = useState(null);
-  console.log(stateRepsNames);
+
+  const [stateName, setStateName] = useState(null);
 
   const [localReps, setLocalReps] = useState(null);
+
   const [localRepsNames, setLocalRepsNames] = useState(null);
 
   // these variables set what is displayed on page
   const [isFed, setIsFed] = useState(true);
-  console.log(isFed);
+
   const [isState, setIsState] = useState(false);
-  console.log(isState);
+
   const [isLocal, setIsLocal] = useState(false);
-  console.log(isLocal);
 
   const makeFedApiCall = async () => {
     const res = await fetch(
@@ -53,6 +55,7 @@ const CurrentOfficials = ({address}) => {
     const json = await res.json();
     setStateReps(json);
     setStateRepsNames(json.officials);
+    setStateName(json.normalizedInput.state);
   };
 
   const makeLocalApiCall = async () => {
