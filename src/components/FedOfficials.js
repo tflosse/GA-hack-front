@@ -1,5 +1,7 @@
 import React from "react";
 import "./fedOfficials.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const FedOfficials = ({ fedReps, fedRepsNames }) => {
   return (
@@ -9,11 +11,22 @@ const FedOfficials = ({ fedReps, fedRepsNames }) => {
             return office.officialIndices.map((official) => {
               return (
                 <div className="fedOfficialsCard">
-                  <img
-                    className="fedOfficialsImg"
-                    src={fedRepsNames ? fedRepsNames[official].photoUrl : null}
-                    alt={fedRepsNames ? fedRepsNames[official].name : null}
-                  />
+                  {fedRepsNames ? (
+                    <div>
+                      {fedRepsNames[official].photoUrl ? (
+                        <img
+                          className="fedOfficialsImg"
+                          src={fedRepsNames[official].photoUrl}
+                          alt={fedRepsNames[official].name}
+                        />
+                      ) : (
+                        <FontAwesomeIcon
+                          icon={faUser}
+                          className="placeholder"
+                        />
+                      )}
+                    </div>
+                  ) : null}
                   <p>{fedRepsNames ? fedRepsNames[official].name : null}</p>
                   <p>{office.name}</p>
                 </div>
