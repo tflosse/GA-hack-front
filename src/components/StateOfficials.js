@@ -58,7 +58,7 @@ const StateOfficials = ({ stateReps, stateRepsNames, isState }) => {
           });
         })
       ) : (
-        <p>D.C. has no state reps</p>
+        <p>Loading</p>
       )}
     </div>
   );
