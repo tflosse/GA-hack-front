@@ -44,7 +44,28 @@
   .nextSteps {
     margin-top: 50px;
     border-top: 1px solid black;
+  }
+
+  .eachNextStep {
     display: flex;
     justify-content: space-around;
+  }
+
+  /* .step.last {
+    background: url('https://res.cloudinary.com/dgbf3yxnd/image/upload/v1601579383/Group_1_n9u3xb.png');
+  } */
+
+  .dots {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    background: black;
+    border-radius: 8px;
   }
 }

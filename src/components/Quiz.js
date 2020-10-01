@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, InputGroup, ListGroup } from 'react-bootstrap';
 import questionsAndAnswers from './quizAnswers';
+import {Link} from 'react-router-dom';
 import './Quiz.css';
 import Feedback from './Feedback';
 import ResultsPopUp from './ResultsPopUp';
@@ -19,9 +20,10 @@ function Quiz({
 	bonus,
 }) {
 	const [section, setSection] = useState(0); // federal = 0, state = 1, local = 2, judicial = 3, measures = 4, general = 5
-	const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0);
+    const [numberOfQuestions, setNumberOfQuestions] = useState(0)
 	const [userChoice, setUserChoice] = useState(0);
-	let answer = questionsAndAnswers[section].section[count].answer;
+	let answer = questionsAndAnswers[section].section[count].answer ? questionsAndAnswers[section].section[count].answer: 1;
 	let question = questionsAndAnswers[section].section[count].question;
 	const [correct, setCorrect] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
@@ -47,10 +49,10 @@ function Quiz({
 	}
 	const handleNextQuestion = (event) => {
 		event.preventDefault();
-
+        setNumberOfQuestions(numberOfQuestions +1)
 		setShowAnswer(false);
 		setSubmitClass('greySubmit');
-
+        
 		if (count === 1) {
 			setSection(section + 1);
 			setCount(0);
@@ -73,7 +75,7 @@ function Quiz({
 		setTimeout(() => {
 			setShowAnswer(true);
 			setSubmitClass('greySubmit');
-		}, 3000);
+		}, 1000);
 
 		if (!submitted) {
 			setSubmitted(true);
@@ -159,15 +161,10 @@ function Quiz({
 	return (
 		<Container className='quizContainer'>
 			<div className='arrows'>
-				<i
-					className='far fa-arrow-alt-circle-left'
-					style={{ fontSize: 36 + 'px' }}></i>
-				<i
-					className='far fa-arrow-alt-circle-right'
-					style={{ fontSize: 36 + 'px' }}
-					onClick={handleNextQuestion}></i>
-				{/* <a className='carouselButtonPrev'></a>
-				<a className='carouselButtonNext'></a> */}
+				<div className='carouselButtonPrev' onClick={handleNextQuestion}></div>
+				{(numberOfQuestions === 11) ? <Link to='/results' className='carouselButtonNext'>
+					<div onClick={handleNextQuestion}></div>
+				</Link> : <div className='carouselButtonNext' onClick={handleNextQuestion}></div>}
 			</div>
 			{showAnswer ? (
 				<Feedback
