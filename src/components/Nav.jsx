@@ -39,7 +39,7 @@ const Nav = (props) => {
             <span className="material-icons Nav-button">close</span>{" "}
         </button>
           <Link to="/about" className="Nav-links">About</Link>
-          <Link to="/current" className="Nav-links" id="current">Current Officials</Link>
+          <Link to="/currentofficials" className="Nav-links" id="current">Current Officials</Link>
       </div>
     </div>
   );
