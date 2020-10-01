@@ -12,27 +12,37 @@ const LocalOfficials = ({ localReps, localRepsNames, isLocal }) => {
               return (
                 <>
                   {localRepsNames ? (
-                    <div className="localOfficialsCard">
-                      <div>
-                        {localRepsNames[official].photoUrl ? (
-                          <img
-                            className="localOfficialsImg"
-                            src={localRepsNames[official].photoUrl}
-                            alt={localRepsNames[official].name}
-                          />
-                        ) : (
-                          <FontAwesomeIcon
-                            icon={faUser}
-                            className="localPlaceholder"
-                          />
-                        )}
+                    <a
+                      href={localRepsNames[official].urls[0]}
+                      target="_blank"
+                      className="link"
+                    >
+                      <div className="localOfficialsCard">
+                        <div>
+                          {localRepsNames[official].photoUrl ? (
+                            <img
+                              className="localOfficialsImg"
+                              src={localRepsNames[official].photoUrl}
+                              alt={localRepsNames[official].name}
+                            />
+                          ) : (
+                            <FontAwesomeIcon
+                              icon={faUser}
+                              className="localPlaceholder"
+                            />
+                          )}
+                        </div>
+                        <p className="realName">
+                          {localRepsNames
+                            ? localRepsNames[official].name
+                            : null}
+                        </p>
+                        <p className="title">{office.name}</p>
+                        <p className="title">
+                          {localRepsNames[official].party}
+                        </p>
                       </div>
-                      <p className="realName">
-                        {localRepsNames ? localRepsNames[official].name : null}
-                      </p>
-                      <p className="title">{office.name}</p>
-                      <p className="title">{localRepsNames[official].party}</p>
-                    </div>
+                    </a>
                   ) : null}
                 </>
               );

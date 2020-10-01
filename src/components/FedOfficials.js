@@ -12,6 +12,7 @@ const FedOfficials = ({ fedReps, fedRepsNames, isFed }) => {
               return (
                 <>
                   {fedRepsNames ? (
+                    <a href ={fedRepsNames[official].urls[0]} target="_blank" className="link">
                     <div className="fedOfficialsCard">
                       <div>
                         {fedRepsNames[official].photoUrl ? (
@@ -41,7 +42,7 @@ const FedOfficials = ({ fedReps, fedRepsNames, isFed }) => {
                         {fedRepsNames ? fedRepsNames[official].name : null}
                       </p>
                       <p className="title">{office.name}</p>
-                    </div>
+                    </div></a>
                   ) : null}
                 </>
               );

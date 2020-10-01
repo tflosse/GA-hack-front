@@ -12,36 +12,44 @@ const StateOfficials = ({ stateReps, stateRepsNames, isState }) => {
               return (
                 <>
                   {stateRepsNames ? (
-                    <div className="stateOfficialsCard">
-                      <div>
-                        {stateRepsNames[official].photoUrl ? (
-                          <img
-                            className={`stateOfficialsImg ${
-                              stateRepsNames[official].party ===
-                              "Republican Party"
-                                ? "red"
-                                : ""
-                            }`}
-                            src={stateRepsNames[official].photoUrl}
-                            alt={stateRepsNames[official].name}
-                          />
-                        ) : (
-                          <FontAwesomeIcon
-                            icon={faUser}
-                            className={`placeholder ${
-                              stateRepsNames[official].party ===
-                              "Republican Party"
-                                ? "red"
-                                : ""
-                            }`}
-                          />
-                        )}
+                    <a
+                      href={stateRepsNames[official].urls[0]}
+                      target="_blank"
+                      className="link"
+                    >
+                      <div className="stateOfficialsCard">
+                        <div>
+                          {stateRepsNames[official].photoUrl ? (
+                            <img
+                              className={`stateOfficialsImg ${
+                                stateRepsNames[official].party ===
+                                "Republican Party"
+                                  ? "red"
+                                  : ""
+                              }`}
+                              src={stateRepsNames[official].photoUrl}
+                              alt={stateRepsNames[official].name}
+                            />
+                          ) : (
+                            <FontAwesomeIcon
+                              icon={faUser}
+                              className={`placeholder ${
+                                stateRepsNames[official].party ===
+                                "Republican Party"
+                                  ? "red"
+                                  : ""
+                              }`}
+                            />
+                          )}
+                        </div>
+                        <p className="realName">
+                          {stateRepsNames
+                            ? stateRepsNames[official].name
+                            : null}
+                        </p>
+                        <p className="title">{office.name}</p>
                       </div>
-                      <p className="realName">
-                        {stateRepsNames ? stateRepsNames[official].name : null}
-                      </p>
-                      <p className="title">{office.name}</p>
-                    </div>
+                    </a>
                   ) : null}
                 </>
               );
