@@ -18,6 +18,8 @@
 
 .fedOfficialsImg {
   width: 150px;
+  max-height: 150px;
+  object-fit: cover;
   border-radius: 75px;
   border: 5px solid #3a537f;
 }
@@ -36,12 +38,13 @@
 }
 
 .realName {
+  margin-top: 15px;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
 .title {
-  font-size: 10px;
+  font-size: 0.8rem;
 }
 
 .link {

@@ -18,6 +18,8 @@
 
 .localOfficialsImg {
   width: 150px;
+  max-height: 150px;
+  object-fit: cover;
   border-radius: 75px;
 }
 

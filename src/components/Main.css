@@ -63,10 +63,11 @@
 
 /* Footer  */
 .Footer {
-    position: absolute;
+    position: fixed;
     bottom: 1vh;
     right: 7vw;
     font-size: 0.5rem;
+    z-index: -1;
 }
 
 /* Landing page */
