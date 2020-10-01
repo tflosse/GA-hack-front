@@ -159,15 +159,15 @@ function Quiz({
 	return (
 		<Container className='quizContainer'>
 			<div className='arrows'>
-				<i
+				{/* <i
 					className='far fa-arrow-alt-circle-left'
 					style={{ fontSize: 36 + 'px' }}></i>
 				<i
 					className='far fa-arrow-alt-circle-right'
 					style={{ fontSize: 36 + 'px' }}
-					onClick={handleNextQuestion}></i>
-				{/* <a className='carouselButtonPrev'></a>
-				<a className='carouselButtonNext'></a> */}
+					></i> */}
+				<div className='carouselButtonPrev'></div>
+				<div className='carouselButtonNext' onClick={handleNextQuestion}></div>
 			</div>
 			{showAnswer ? (
 				<Feedback
