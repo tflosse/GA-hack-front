@@ -5,11 +5,14 @@ import "./Main.css";
 const Nav = (props) => {
 
     const [nav, setNav] = useState("hidden")
+    const [hamburger, setHamburger] = useState("shown")
     const handleShow = () => {
         setNav("shown")
+        setHamburger("hidden")
     }
     const handleCollapse = () => {
         setNav("hidden")
+        setHamburger("shown")
     }
 
   return (
@@ -19,10 +22,10 @@ const Nav = (props) => {
         src="https://res.cloudinary.com/dgbf3yxnd/image/upload/v1601498666/Logo_liyotz.png"
         alt="logo"
       />
-      <button className="Mobile-nav" onClick={handleShow}>
+      <button className={`Mobile-nav ${hamburger}`} onClick={handleShow}>
         <span className="material-icons Nav-button">menu</span>{" "}
       </button>
-      <div className="Nav-items nav">
+      <div className={`Nav-items ${nav}`}>
         <button className="Mobile-nav" onClick={handleCollapse}>
             <span className="material-icons Nav-button">close</span>{" "}
         </button>
