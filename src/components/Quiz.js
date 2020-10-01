@@ -9,7 +9,7 @@ function Quiz(props) {
 	let answer = questionsAndAnswers[section].section[count].answer;
 	const [correct, setCorrect] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
-
+    const [submitClass, setSubmitClass] = useState('greySubmit')
 	//colors for each option
 
 	const [colors, setColors] = useState({
@@ -28,7 +28,8 @@ function Quiz(props) {
 	}
 
 	const handleSubmit = (event) => {
-		event.preventDefault();
+        event.preventDefault();
+        setSubmitClass('submit')
 		if (!submitted) {
 			setSubmitted(true);
 			if (userChoice === answer) {
@@ -95,10 +96,13 @@ function Quiz(props) {
 			}
 		}
 	};
-
+let hint = questionsAndAnswers[section].section[count].hint;
 	return (
 		<Container className='quizContainer'>
-			<h3>{questionsAndAnswers[section].section[count].question}</h3>
+			<h3 className='question'>
+				{questionsAndAnswers[section].section[count].question}
+			</h3>
+    <p>{hint ? hint: '' }</p>
 			<form onSubmit={handleSubmit}>
 				<ListGroup className='listGroup'>
 					<ListGroup.Item className='item'>
@@ -115,7 +119,7 @@ function Quiz(props) {
 							</InputGroup.Prepend>
 
 							<label className={'choice ' + colors.color0} htmlFor={choices[0]}>
-								{choices[0]}
+								A. {choices[0]}
 							</label>
 						</InputGroup>
 					</ListGroup.Item>
@@ -134,7 +138,7 @@ function Quiz(props) {
 							</InputGroup.Prepend>
 
 							<label className={'choice ' + colors.color1} htmlFor={choices[0]}>
-								{choices[1]}
+								B. {choices[1]}
 							</label>
 						</InputGroup>
 					</ListGroup.Item>
@@ -153,7 +157,7 @@ function Quiz(props) {
 							</InputGroup.Prepend>
 
 							<label className={'choice ' + colors.color2} htmlFor={choices[0]}>
-								{choices[2]}
+								C. {choices[2]}
 							</label>
 						</InputGroup>
 					</ListGroup.Item>
@@ -172,12 +176,17 @@ function Quiz(props) {
 							</InputGroup.Prepend>
 
 							<label className={'choice ' + colors.color3} htmlFor={choices[0]}>
-								{choices[3]}
+								D. {choices[3]}
 							</label>
 						</InputGroup>
 					</ListGroup.Item>
 				</ListGroup>
-				<button type='submit'>Submit</button>
+				<div className='buttons'>
+					<button type='submit' className={submitClass}>
+						Submit
+					</button>
+					<button className={submitClass}>Answer</button>
+				</div>
 			</form>
 		</Container>
 	);

@@ -5,7 +5,6 @@ import Quiz from './components/Quiz'
 function App() {
   return (
     <div className="App">
-      <h1>This is the Main Quiz Panel</h1>
     <Route path='/quiz' component={Quiz}/>
     </div>
   );
