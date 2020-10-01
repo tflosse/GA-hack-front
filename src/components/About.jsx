@@ -11,7 +11,7 @@ const About = ({address, handleChange, handleSubmit}) => {
     });
   
     return (
-    <div>
+    <div className="About-panel">
         <h4>Vote informed.</h4>
         <div className={`${mobile ? `hidden`:`About-left`}`}>
             <h2>
@@ -54,7 +54,7 @@ const About = ({address, handleChange, handleSubmit}) => {
             />
             <div className="Start-button-div">
             <Link to="/quiz">
-                <button className="Start-button" type="submit">
+                <button className="Start-button" type="submit" onClick={handleSubmit}>
                 Get Started
                 </button>
             </Link>
