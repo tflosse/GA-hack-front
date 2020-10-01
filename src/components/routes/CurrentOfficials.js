@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./currentOfficials.css";
 import FedOfficials from "../FedOfficials";
 import StateOfficials from "../StateOfficials";
+import LocalOfficials from "../LocalOfficials";
 
 const CurrentOfficials = () => {
   const key = process.env.REACT_APP_api_key;
@@ -11,11 +12,20 @@ const CurrentOfficials = () => {
   const [fedReps, setFedReps] = useState(null);
   // get specific name info from fedReps object
   const [fedRepsNames, setFedRepsNames] = useState(null);
+
   const [stateReps, setStateReps] = useState(null);
-  console.log(stateReps)
-  // get specific name info from fedReps object
   const [stateRepsNames, setStateRepsNames] = useState(null);
-  console.log(stateRepsNames)
+
+  const [localReps, setLocalReps] = useState(null);
+  const [localRepsNames, setLocalRepsNames] = useState(null);
+
+  // these variables set what is displayed on page
+  const [isFed, setIsFed] = useState(true);
+  console.log(isFed);
+  const [isState, setIsState] = useState(false);
+  console.log(isState);
+  const [isLocal, setIsLocal] = useState(false);
+  console.log(isLocal);
 
   const makeFedApiCall = async () => {
     const res = await fetch(
@@ -35,17 +45,19 @@ const CurrentOfficials = () => {
     setStateRepsNames(json.officials);
   };
 
-  // const makeLocalApiCall = async () => {
-  //   const res = await fetch(
-  //     `https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${address}&levels=administrativeArea2&levels=locality&key=${key}`
-  //   );
-  //   const json = await res.json();
-  //   setArtistInfo(json.artists);
-  // };
+  const makeLocalApiCall = async () => {
+    const res = await fetch(
+      `https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${address}&levels=administrativeArea2&levels=locality&key=${key}`
+    );
+    const json = await res.json();
+    setLocalReps(json);
+    setLocalRepsNames(json.officials);
+  };
 
   useEffect(() => {
     makeFedApiCall();
     makeStateApiCall();
+    makeLocalApiCall();
   }, []);
 
   return (
@@ -66,8 +78,41 @@ const CurrentOfficials = () => {
           informed vote at the ballot.
         </p>
       </div>
-      <FedOfficials fedReps={fedReps} fedRepsNames={fedRepsNames} />
-      {/* <StateOfficials stateReps={stateReps} stateRepsNames={stateRepsNames} /> */}
+      <div className="govLevel">
+        <p
+          onClick={() => setIsFed(true) & setIsLocal(false) & setIsState(false)}
+          className={`${isFed ? "color" : ""}`}
+        >
+          Federal
+        </p>
+        <p
+          onClick={() => setIsState(true) & setIsLocal(false) & setIsFed(false)}
+          className={`${isState ? "color" : ""}`}
+        >
+          State
+        </p>
+        <p
+          onClick={() => setIsLocal(true) & setIsFed(false) & setIsState(false)}
+          className={`${isLocal ? "color" : ""}`}
+        >
+          Local
+        </p>
+      </div>
+      <FedOfficials
+        fedReps={fedReps}
+        fedRepsNames={fedRepsNames}
+        isFed={isFed}
+      />
+      <StateOfficials
+        stateReps={stateReps}
+        stateRepsNames={stateRepsNames}
+        isState={isState}
+      />
+      <LocalOfficials
+        localReps={localReps}
+        localRepsNames={localRepsNames}
+        isLocal={isLocal}
+      />
     </div>
   );
 };

@@ -1,3 +1,7 @@
+.fedOfficials.hide {
+  display: none;
+}
+
 .fedOfficials {
   display: flex;
   flex-wrap: wrap;

@@ -3,9 +3,9 @@ import "./fedOfficials.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-const FedOfficials = ({ fedReps, fedRepsNames }) => {
+const FedOfficials = ({ fedReps, fedRepsNames, isFed }) => {
   return (
-    <div className="fedOfficials">
+    <div className={`fedOfficials ${isFed ? null : "hide"}`}>
       {fedReps
         ? fedReps.offices.map((office) => {
             return office.officialIndices.map((official) => {

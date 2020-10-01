@@ -1,26 +1,28 @@
+.stateOfficials.hide {
+  display: none;
+}
+
 .stateOfficials {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .stateOfficialsCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 350px;
-    width: 300px;
-  }
-  
-  .stateOfficialsImg {
-    width: 200px;
-    border-radius: 100px;
-  }
-  
-  .placeholder {
-      font-size: 200px;
-  }
-  
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.stateOfficialsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  width: 300px;
+}
+
+.stateOfficialsImg {
+  width: 200px;
+  border-radius: 100px;
+}
+
+.placeholder {
+  font-size: 200px;
+}

@@ -3,9 +3,9 @@ import "./stateOfficials.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-const StateOfficials = ({ stateReps, stateRepsNames }) => {
+const StateOfficials = ({ stateReps, stateRepsNames, isState }) => {
   return (
-    <div className="stateOfficials">
+    <div className={`stateOfficials ${isState ? null : "hide"}`}>
       {stateReps
         ? stateReps.offices.map((office) => {
             return office.officialIndices.map((official) => {
