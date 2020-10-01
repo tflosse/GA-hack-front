@@ -12,6 +12,7 @@
 
 .resultsPopUpInner {
   margin: 20px;
+  height: 60vh;
   position: relative;
   background: #FFF9EB;
   padding: 10px;
@@ -24,6 +25,7 @@
   right: 20px;
   top: 15px;
   cursor: pointer;
+  color: #3A537F;
 }
 
 .resultsPopUpMain {
@@ -36,6 +38,8 @@
   font-family: "Spectral", serif;
   font-weight: normal;
   margin-top: 20px;
+  color: #3A537F;
+  margin-bottom: 25px;
 }
 
 .allResultsBars {
@@ -58,7 +62,7 @@
 .resultsBar p {
   width: 100px;
   font-family: "Mulish", sans-serif;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   padding-bottom: 0;
   margin-top: 20px;
 }
