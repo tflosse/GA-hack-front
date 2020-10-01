@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, InputGroup, ListGroup } from 'react-bootstrap';
 import questionsAndAnswers from './quizAnswers';
+import {Link} from 'react-router-dom';
 import './Quiz.css';
 import Feedback from './Feedback';
 import ResultsPopUp from './ResultsPopUp';
@@ -25,7 +26,8 @@ function Quiz({
 	let question = questionsAndAnswers[section].section[count].question;
 	const [correct, setCorrect] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
-	const [submitClass, setSubmitClass] = useState('greySubmit');
+    const [submitClass, setSubmitClass] = useState('greySubmit');
+    
 	//SCORES for sections
 
 	//colors for each option
@@ -67,7 +69,16 @@ function Quiz({
 			color2: 'normal',
 			color3: 'normal',
 		});
-	};
+    };
+    const [nextbutton, setNextButton] = useState(
+			section === 5 && count === 1 ? (
+				<Link to='/results' className='carouselButtonNext'>
+					<div onClick={handleNextQuestion}></div>
+				</Link>
+			) : (
+				<div className='carouselButtonNext' onClick={handleNextQuestion}></div>
+			)
+		);
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		setTimeout(() => {
@@ -159,15 +170,8 @@ function Quiz({
 	return (
 		<Container className='quizContainer'>
 			<div className='arrows'>
-				{/* <i
-					className='far fa-arrow-alt-circle-left'
-					style={{ fontSize: 36 + 'px' }}></i>
-				<i
-					className='far fa-arrow-alt-circle-right'
-					style={{ fontSize: 36 + 'px' }}
-					></i> */}
 				<div className='carouselButtonPrev'></div>
-				<div className='carouselButtonNext' onClick={handleNextQuestion}></div>
+				{nextbutton}
 			</div>
 			{showAnswer ? (
 				<Feedback
