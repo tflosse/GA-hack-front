@@ -6,12 +6,13 @@ import LocalOfficials from "../LocalOfficials";
 
 const CurrentOfficials = () => {
   const key = process.env.REACT_APP_api_key;
-  // const [address, setAddress] = useState(
-  //   "1%20East%20Elliott%20St.%2C%20Charleston%2C%20South%20Carolina%2029401"
-  // );
-  const [address, setAddress] = useState(
-    "51%20Rose%20Ave%2C%20Venice%2C%20CA%2090291"
-  );
+  const [address, setAddress] = useState("51 Rose Ave, Venice, CA 90291");
+
+  const reformatAddress = (address) => {
+    let format1 = address.replace(/ /g, "%20");
+    let format2 = format1.replace(/,/g, "%2C");
+    return format2;
+  };
 
   const [fedReps, setFedReps] = useState(null);
   // get specific name info from fedReps object
@@ -34,7 +35,9 @@ const CurrentOfficials = () => {
 
   const makeFedApiCall = async () => {
     const res = await fetch(
-      `https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${address}&levels=country&key=${key}`
+      `https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${reformatAddress(
+        address
+      )}&levels=country&key=${key}`
     );
     const json = await res.json();
     setFedReps(json);
@@ -43,7 +46,9 @@ const CurrentOfficials = () => {
 
   const makeStateApiCall = async () => {
     const res = await fetch(
-      `https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${address}&levels=administrativeArea1&key=${key}`
+      `https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${reformatAddress(
+        address
+      )}&levels=administrativeArea1&key=${key}`
     );
     const json = await res.json();
     setStateReps(json);
@@ -52,7 +57,9 @@ const CurrentOfficials = () => {
 
   const makeLocalApiCall = async () => {
     const res = await fetch(
-      `https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${address}&levels=administrativeArea2&levels=locality&key=${key}`
+      `https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${reformatAddress(
+        address
+      )}&levels=administrativeArea2&levels=locality&key=${key}`
     );
     const json = await res.json();
     setLocalReps(json);
