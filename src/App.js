@@ -5,6 +5,7 @@ import Layout from "./components/Layout";
 import Quiz from "./components/Quiz";
 import Results from "./components/routes/Results";
 import UserForm from "./components/routes/UserForm";
+import About from "./components/About"
 
 function App() {
   const [address, setAddress] = useState("51 Rose Ave, Venice CA 90291")
@@ -34,6 +35,7 @@ function App() {
             )}
           />
           <Route path="/results" component={Results} />
+          <Route path="/about" component={About} />
         </Layout>
         <Route path="/quiz" component={Quiz} />
       </Switch>
