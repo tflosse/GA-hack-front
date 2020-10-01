@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../Main.css";
 
 const UserForm = ({ address, handleChange, handleSubmit }) => {
+  
+  const [mobile, setMobile] = useState(true)
+    useEffect(() => {
+        if (window.innerWidth > 722) {setMobile(false)}
+        else setMobile(true)
+    });
+
   return (
     <div className="Main-panel">
       <img className="Ballot-illustration" src="https://res.cloudinary.com/dgbf3yxnd/image/upload/v1601504623/Groupballot_qaq1qw.png" alt="ballot" />
+      <img className={` ${mobile ? `hidden` : `Arrow-img`}`} src="https://i.imgur.com/0y56ZGS.png" alt="arrow" />
       <form className="Address-form" onSubmit={handleSubmit}>
         <h1>Are you ready for the 2020 Election?</h1>
         <h4>

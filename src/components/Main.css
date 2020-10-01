@@ -178,6 +178,9 @@
         grid-template-rows: 10px 45vh 15vh;
         margin: 100px;
     }
+    .Main-panel {
+        position: relative;
+    }
     .Address-form {
         grid-area: 2 / 1 / 3 / 2 ;
         width: 100%;
@@ -189,6 +192,12 @@
         max-height: 100%;
         margin: 0;
         margin-left: 2vw;
+    }
+    .Arrow-img {
+        position: absolute;
+        bottom: -6vh;
+        right: 25vw;
+        z-index: 10;
     }
     .Address-form h1, .Address-form h4 {
         max-width: 35vw;
