@@ -24,6 +24,7 @@ function App() {
   const [bonus, setBonus] = useState(0);
 
   const [address, setAddress] = useState("51 Rose Ave, Venice CA 90291");
+  console.log(address)
 
   const handleChange = (event) => {
     console.log("Handling address change", event);
@@ -32,7 +33,7 @@ function App() {
 
   const handleSubmit = (event) => {
     // event.preventDefault();
-    console.log("Fetching data for - ", address);
+    // console.log("Fetching data for - ", address);
   };
 
   return (
