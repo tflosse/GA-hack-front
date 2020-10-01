@@ -4,9 +4,9 @@ import FedOfficials from "../FedOfficials";
 import StateOfficials from "../StateOfficials";
 import LocalOfficials from "../LocalOfficials";
 
-const CurrentOfficials = () => {
+const CurrentOfficials = ({address}) => {
+  console.log(address)
   const key = process.env.REACT_APP_api_key;
-  const [address, setAddress] = useState("51 Rose Ave, Venice, CA 90291");
 
   const reformatAddress = (address) => {
     let format1 = address.replace(/ /g, "%20");
