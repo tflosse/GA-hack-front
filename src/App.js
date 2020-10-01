@@ -12,7 +12,7 @@ import Layout from "./components/Layout";
 import Quiz from "./components/Quiz";
 import Results from "./components/routes/Results";
 import About from "./components/About";
-import UserForm from "./components/routes/UserForm";
+import userForm from "./components/routes/userForm";
 import CurrentOfficials from "./components/routes/CurrentOfficials";
 
 function App() {
@@ -44,7 +44,7 @@ function App() {
             exact
             path="/"
             render={(routerProps) => (
-              <UserForm
+              <userForm
                 {...routerProps}
                 address={address}
                 setAddress={setAddress}
