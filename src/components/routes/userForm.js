@@ -20,7 +20,7 @@ const UserForm = ({ address, handleChange, handleSubmit }) => {
         />
         <div className="Start-button-div">
           <Link to="/quiz">
-            <button className="Start-button" type="submit">
+            <button className="Start-button" type="submit" onClick={handleSubmit}>
               Get Started
             </button>
           </Link>

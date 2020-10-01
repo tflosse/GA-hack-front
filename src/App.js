@@ -31,7 +31,7 @@ function App() {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     console.log("Fetching data for - ", address);
   };
 
@@ -46,6 +46,7 @@ function App() {
               <UserForm
                 {...routerProps}
                 address={address}
+                setAddress={setAddress}
                 handleChange={handleChange}
                 handleSubmit={handleSubmit}
               />
@@ -92,7 +93,7 @@ function App() {
           <Route
             path="/currentofficials"
             render={() => {
-              return <CurrentOfficials address={address} />;
+              return <CurrentOfficials address={address}/>;
             }}
           />
         </Layout>

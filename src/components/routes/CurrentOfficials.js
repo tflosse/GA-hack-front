@@ -5,7 +5,7 @@ import StateOfficials from "../StateOfficials";
 import LocalOfficials from "../LocalOfficials";
 
 const CurrentOfficials = ({address}) => {
-  console.log(address)
+  console.log("Passed from App:", address)
   const key = process.env.REACT_APP_api_key;
 
   const reformatAddress = (address) => {
