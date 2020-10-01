@@ -7,8 +7,8 @@ const CurrentOfficials = () => {
   const [fedReps, setFedReps] = useState(null);
   console.log(fedReps);
   // get specific name info from fedReps object
-  const [fedRepsNames, setFedRepsNames] = useState(null)
-  console.log(fedRepsNames)
+  const [fedRepsNames, setFedRepsNames] = useState(null);
+  console.log(fedRepsNames);
 
   const makeFedApiCall = async () => {
     const res = await fetch(
@@ -16,7 +16,7 @@ const CurrentOfficials = () => {
     );
     const json = await res.json();
     setFedReps(json);
-    setFedRepsNames(json.officials)
+    setFedRepsNames(json.officials);
   };
 
   useEffect(() => {
@@ -41,14 +41,23 @@ const CurrentOfficials = () => {
 
   return (
     <div className="currentOfficials">
-      <h1>Current Officials</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor urna,
-        ut mi sed scelerisque ullamcorper nisi, vulputate orci. Nunc habitant
-        vitae rutrum pharetra ut leo. Interdum ornare donec a molestie morbi sed
-        non, et ac.
-      </p>
-      <FedOfficials fedReps={fedReps} fedRepsNames={fedRepsNames}/>
+      <div className="currentOfficialsHeader">
+        <h1>Current Officials</h1>
+        <p className="currentOfficialsInfoMobile">
+          Learn more about your current federal, local, statewide and judicial
+          elected officials. Explore the backgrounds and opinions of every
+          candidate to help you make an informed vote at the ballot.
+        </p>
+        <p className="currentOfficialsInfoExpand">
+          Learn more about your current federal, local, statewide and judicial
+          elected officials.
+          <br /> Explore the backgrounds and opinions of every candidate to help
+          you make an
+          <br />
+          informed vote at the ballot.
+        </p>
+      </div>
+      <FedOfficials fedReps={fedReps} fedRepsNames={fedRepsNames} />
     </div>
   );
 };
