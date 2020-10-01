@@ -1,0 +1,96 @@
+* {
+    font-family: 'Mulish', sans-serif;
+}
+
+/* Main Nav bar */
+.Nav-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo {
+    max-width: 10vw;
+    margin: 25px;
+    margin-left: 35px;
+}
+
+.Mobile-nav {
+    background-color: transparent;
+    border: none;
+    margin: 25px;
+    padding-right: 5px;
+}
+
+.Nav-button {
+    font-size: 2.8rem;
+    color: #3A537F;
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer  */
+.Footer {
+    position: fixed;
+    bottom: 1vh;
+    right: 7vw;
+    font-size: 0.5rem;
+}
+
+/* Landing page */
+
+.Ballot-illustration {
+    max-width: 60vw;
+    margin-top: 5vh;
+}
+
+.Main-panel h1 {
+    margin: 25px;
+    margin-top: 35px;
+    color: #3A537F;
+    font-size: 2rem;
+    font-family: 'Spectral', serif;
+}
+
+.Main-panel h4 {
+    margin: 20px 25px;
+    font-size: 1.05rem;
+}
+
+.Address-form {
+    margin-top: 30px;
+}
+
+.Address-input, .Start-button {
+    width: 75vw;
+    margin: 7px auto;
+    padding: 12px 7px;
+    border-radius: 3px;
+    border: 0.5px solid black;
+}
+
+.Address-input {
+    color: grey;
+    font-size: 0.8rem;
+}
+.Start-button {
+    background-color: #3A537F;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    border: none;
+}
+
+.Main-panel p {
+    margin: 10px 20px;
+    font-size: 0.75rem;
+}

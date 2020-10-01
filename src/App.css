@@ -1,4 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Spectral&display=swap");
+
 .App {
+  background-color: #FFF9EB;
+  height: 100vh;
   text-align: center;
   background: #FFF9EB;
 }

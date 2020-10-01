@@ -1,0 +1,119 @@
+.hide {
+  display: none;
+}
+
+.resultsPopUp {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+}
+
+.resultsPopUpInner {
+  margin: 20px;
+  position: relative;
+  background: #fffde8;
+  padding: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.exitLogo {
+  font-size: 25px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.resultsPopUpMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultsPopUpMain h1 {
+  font-family: "Spectral", serif;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+.allResultsBars {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.allResultsBarColumn {
+  display: flex;
+}
+
+.resultsBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultsBar p {
+  width: 100px;
+  font-family: "Mulish", sans-serif;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 20px;
+}
+
+.resultsInfo {
+  margin-top: 20px;
+}
+
+.resultsInfo p {
+  font-family: "Mulish", sans-serif;
+}
+
+.resultsInfo h1 {
+  display: none;
+}
+
+.socialLogo {
+  font-size: 40px;
+  padding: 5px;
+}
+
+.progress-bar {
+  background-color: #fffde8 !important;
+  color: black !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .resultsPopUpInner {
+    margin: 100px 100px 100px 100px;
+  }
+
+  .resultsPopUpMain {
+    flex-direction: row;
+  }
+
+  .allResultsBars {
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+  }
+
+  .resultsBar {
+    margin: 10px;
+  }
+
+  .resultsPopUpMain h1 {
+    display: none;
+  }
+
+  .resultsInfo h1 {
+    display: block;
+  }
+
+  .resultsInfo {
+    text-align: left;
+    width: 30%;
+  }
+}
