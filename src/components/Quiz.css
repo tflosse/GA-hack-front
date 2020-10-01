@@ -1,24 +1,75 @@
-.item{
-    height: 50px;
+.item {
+	height: 50px;
+	background: #fff9eb;
 }
-.prepend{
-    background: white;
-    margin-top: 5px;
-    
+.prepend {
+	background: #fff9eb;
+	margin-top: 5px;
 }
-.choice{
-margin-left:10px ;
+form {
+	background-color: #fff9eb;
 }
-.radioInput{
-    padding: 5px 0;
+.listGroup {
+	background-color: #fff9eb;
+}
+.choice {
+	margin-left: 10px;
+	background: #fff9eb;
+}
+.radioInput {
+	padding: 5px 0;
+	background-color: #fff9eb;
 }
 
-.right{
-    color: #447F3A;
+.right {
+	color: #447f3a;
+	background: #fff9eb;
 }
-.wrong{
-    color: #C65D4C;
+.wrong {
+	color: #c65d4c;
+	background: #fff9eb;
 }
-.normal{
-    color: black;
+.normal {
+	color: black;
+	background: #fff9eb;
+}
+.quizContainer {
+	background: #fff9eb;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.question {
+	margin-top: 100px;
+	font-size: #312c28;
+}
+.submit{
+	background: #3a537f;
+	color: #ffffff;
+	border-radius: 9px;
+
+	padding: 5px 20px;
+	border: none;
+	margin-right: 0;
+	margin-top: 50px;
+}
+.submit {
+	margin-right: 50px;
+}
+.greySubmit {
+	background:#69758b;
+	color: #ffffff;
+	border-radius: 9px;
+
+	padding: 5px 20px;
+	border: none;
+	margin-right: 0;
+	margin-top: 50px;
+	margin-right: 50px;
+}
+.buttons {
+	display: flex;
+	flex-direction: row;
+}
+@media (max-width: 700px) {
 }
